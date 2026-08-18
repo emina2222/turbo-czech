@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turbo Czech — Učite češki, nivo A1</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+
+<nav class="tc-nav">
+  <div class="tc-nav-inner">
+    <a href="index.html" class="tc-brand">Turbo <span>Czech</span></a>
+    <div class="tc-nav-links">
+      <a href="index.html" data-nav="home">Početna</a>
+      <a href="lessons/lesson-01-greetings.html" data-nav="lessons">Lekcije</a>
+      <a href="vocabulary/index.html" data-nav="vocabulary">Rečnik</a>
+      <a href="pronunciation/index.html" data-nav="pronunciation">Izgovor</a>
+      <a href="grammar/index.html" data-nav="grammar">Gramatika</a>
+      <a href="reading/index.html" data-nav="reading">Čitanje</a>
+    </div>
+    <span class="tc-progress-chip" data-total-lessons="10"></span>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="tc-hero">
+    <div class="eyebrow">A1 · Češki za početnike</div>
+    <h1>Dobrý den! Gradimo vaš češki, 30 minuta dnevno.</h1>
+    <p class="lead">
+      Turbo Czech je samostalni A1 kurs napravljen za ljude koji se spremaju da žive i rade
+      u Češkoj — uključujući poslove u magacinu i logistici. Deset vođenih lekcija,
+      prava rečnik sa posla, vežbe izgovora, gramatički pregledi i vežbe čitanja,
+      sve u vašem pregledaču. Bez registracije, bez servera — vaš napredak se čuva
+      direktno na ovom uređaju.
+    </p>
+  </div>
+
+  <div class="card" id="progress-card">
+    <h2>Vaš napredak</h2>
+    <div class="progress-bar-track"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
+    <p id="progress-text" style="margin-top:10px; color: var(--muted);">Učitavanje…</p>
+  </div>
+
+  <h2>Moduli</h2>
+  <div class="grid grid-3" style="margin-bottom: 28px;">
+    <a class="module-card" href="lessons/lesson-01-greetings.html">
+      <span class="icon">🧭</span>
+      <h3>Lekcije</h3>
+      <p>10 lekcija korak po korak: slušanje, pisanje, popunjavanje praznina i mini kviz.</p>
+    </a>
+    <a class="module-card" href="vocabulary/index.html">
+      <span class="icon">📚</span>
+      <h3>Rečnik</h3>
+      <p>Reči organizovane po temama, sa zvukom i karticama za učenje — uključujući magacinski alat i bezbednost.</p>
+    </a>
+    <a class="module-card" href="pronunciation/index.html">
+      <span class="icon">🔊</span>
+      <h3>Izgovor</h3>
+      <p>Češka azbuka, teški glasovi kao što su ř i ě, pravila naglaska i vežbe slušaj-pa-ponovi.</p>
+    </a>
+    <a class="module-card" href="grammar/index.html">
+      <span class="icon">🧩</span>
+      <h3>Gramatika</h3>
+      <p>Kratke referentne stranice o glagolima, zamenicama, rodu, pitanjima i još mnogo toga.</p>
+    </a>
+    <a class="module-card" href="reading/index.html">
+      <span class="icon">📄</span>
+      <h3>Čitanje</h3>
+      <p>Kratki A1 tekstovi — dijalozi, natpisi, raspored smena — sa proverom razumevanja.</p>
+    </a>
+    <a class="module-card" href="lessons/lesson-05-warehouse-1.html">
+      <span class="icon">📦</span>
+      <h3>Magacinski smer</h3>
+      <p>Dve posebne lekcije o magacinskoj opremi, bezbednosti i radnim komandama.</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Kako učiti (30 minuta dnevno)</h2>
+    <p>Svaka lekcija je osmišljena da stane u fokusiranih pola sata i prati isti ritam, tako da uvek
+      znate šta sledi:</p>
+    <table class="simple-table">
+      <tr><th>~5 min</th><td>Novi rečnik sa zvukom</td></tr>
+      <tr><th>~5 min</th><td>Gramatika u fokusu — jedna ideja, jednostavno objašnjena</td></tr>
+      <tr><th>~5 min</th><td>Vežba slušanja</td></tr>
+      <tr><th>~5 min</th><td>Popunjavanje praznina</td></tr>
+      <tr><th>~5 min</th><td>Vežba pisanja</td></tr>
+      <tr><th>~5 min</th><td>Mini kviz da učvrstite gradivo</td></tr>
+    </table>
+    <p style="margin-top: 14px;">Radite po jednu lekciju dnevno, po redu. Vratite se na <a href="vocabulary/index.html">Rečnik</a>
+      i <a href="pronunciation/index.html">Izgovor</a> kad god poželite dodatnu vežbu — napravljeni su
+      tako da ih možete koristiti bilo kada.</p>
+  </div>
+
+  <h2>Plan lekcija</h2>
+  <div class="card" id="lesson-roadmap">
+    <!-- filled by JS -->
+  </div>
+
+</div>
+
+<div class="tc-footer">Turbo Czech · A1 kurs · Vaš napredak se čuva samo u ovom pregledaču (localStorage).</div>
+
+<script src="js/app.js"></script>
+<script>
+  const LESSONS = [
+    { id: "lesson01", file: "lessons/lesson-01-greetings.html", title: "1. Pozdravi i upoznavanje", desc: "Ahoj, jsem…, jak se jmenuješ?" },
+    { id: "lesson02", file: "lessons/lesson-02-numbers.html", title: "2. Brojevi i brojanje", desc: "0–100, brojanje kutija i paleta" },
+    { id: "lesson03", file: "lessons/lesson-03-family.html", title: "3. Porodica i ljudi", desc: "rodina, mít, prisvojne zamenice" },
+    { id: "lesson04", file: "lessons/lesson-04-food-drink.html", title: "4. Hrana i piće", desc: "jídlo, pití, mít rád, naručivanje" },
+    { id: "lesson05", file: "lessons/lesson-05-warehouse-1.html", title: "5. Osnove magacina I", desc: "📦 sklad, nářadí, bezpečnost — oprema i bezbednost" },
+    { id: "lesson06", file: "lessons/lesson-06-time-routine.html", title: "6. Vreme i dnevna rutina", desc: "hodiny, dny, směny (smene)" },
+    { id: "lesson07", file: "lessons/lesson-07-directions.html", title: "7. Pravci i mesta", desc: "kde je…, vlevo, vpravo" },
+    { id: "lesson08", file: "lessons/lesson-08-shopping.html", title: "8. Kupovina i novac", desc: "obchod, kolik to stojí?" },
+    { id: "lesson09", file: "lessons/lesson-09-warehouse-2.html", title: "9. Osnove magacina II", desc: "📦 radne komande i imperativ" },
+    { id: "lesson10", file: "lessons/lesson-10-review.html", title: "10. Ponavljanje i prekretnica", desc: "Kumulativni pregled + najava A2 nivoa" },
+  ];
+
+  function renderProgress() {
+    const data = TC.getProgress();
+    const total = LESSONS.length;
+    const done = TC.countCompleted(total);
+    const pct = Math.round((done / total) * 100);
+    document.getElementById("progress-fill").style.width = pct + "%";
+    const streak = data.daysVisited ? data.daysVisited.length : 0;
+    document.getElementById("progress-text").textContent =
+      done + " od " + total + " lekcija završeno (" + pct + "%) · " + streak + " dan" + (streak === 1 ? "" : "a") + " vežbanja zabeleženo";
+
+    const roadmap = document.getElementById("lesson-roadmap");
+    roadmap.innerHTML = LESSONS.map((l) => {
+      const rec = data.lessons[l.id];
+      const isDone = rec && rec.completed;
+      return '<a class="lesson-row' + (isDone ? ' done' : '') + '" href="' + l.file + '">' +
+        '<div class="num">' + (isDone ? '✓' : l.id.slice(-2).replace(/^0/, '')) + '</div>' +
+        '<div class="info"><div class="title">' + l.title + '</div><div class="desc">' + l.desc + '</div></div>' +
+        '<div class="status">' + (isDone ? 'Rezultat ' + rec.score + '/' + rec.total : 'Počni →') + '</div>' +
+        '</a>';
+    }).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", renderProgress);
+</script>
+
+</body>
+</html>
