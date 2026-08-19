@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poruka kolegi — Čitanje — Turbo Czech</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="reading">
+
+<nav class="tc-nav">
+  <div class="tc-nav-inner">
+    <a href="../index.html" class="tc-brand">Turbo <span>Czech</span></a>
+    <div class="tc-nav-links">
+      <a href="../index.html" data-nav="home">Početna</a>
+      <a href="../lessons/lesson-01-greetings.html" data-nav="lessons">Lekcije</a>
+      <a href="../vocabulary/index.html" data-nav="vocabulary">Rečnik</a>
+      <a href="../pronunciation/index.html" data-nav="pronunciation">Izgovor</a>
+      <a href="../grammar/index.html" data-nav="grammar">Gramatika</a>
+      <a href="index.html" data-nav="reading">Čitanje</a>
+    </div>
+    <span class="tc-progress-chip" data-total-lessons="10"></span>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="tc-hero">
+    <div class="eyebrow">Čitanje · Poruka</div>
+    <h1>Poruka kolegi</h1>
+    <p class="lead"><a href="index.html">← Nazad na Čitanje</a></p>
+    <p class="lead">Petra je ostavila kratku poruku svom kolegi Tomášu pre nego što je otišla kući.</p>
+  </div>
+
+  <div class="card">
+    <h2>Poruka</h2>
+    <p style="color:var(--muted); font-size:0.9rem;">Dodirnite zvučnik da čujete celu poruku.</p>
+    <div class="callout tip" style="font-size:1.05rem;">
+      <button class="speak-btn" data-speak="Ahoj Tomáši, zítra mám volno. Můžeš prosím zkontrolovat sklad B? Palety jsou už připravené. Díky moc! Petra">🔊</button>
+      <p style="margin-top:10px;">
+        Ahoj Tomáši,<br>
+        zítra mám volno. Můžeš prosím zkontrolovat sklad B? Palety jsou už připravené.<br>
+        Díky moc!<br>
+        Petra
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="ex-label quiz">Provera razumevanja</span>
+    <h2>Odgovorite na pitanja o poruci</h2>
+    <form class="quiz" data-pass-pct="60" data-result-target=".quiz-result">
+
+      <div class="quiz-question" data-correct="a">
+        <div class="q-text">1. Ko piše poruku?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q0" value="a"> Petra</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="b"> Tomáš</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="c"> Jana</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="c">
+        <div class="q-text">2. Zašto Petra piše poruku?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Traži posao</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Pita gde je sklad</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Sutra je slobodna i traži pomoć</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="b">
+        <div class="q-text">3. Šta Petra traži od Tomáša?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Da kupi hleb</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Da proveri magacin B</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Da promeni smenu</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="a">
+        <div class="q-text">4. Šta je već pripremljeno, prema poruci?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3" value="a"> Palete</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="b"> Kutije</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="c"> Etikete</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Proveri odgovore</button>
+    </form>
+    <div class="quiz-result"></div>
+  </div>
+
+</div>
+
+<div class="tc-footer">Turbo Czech · A1 kurs · Vaš napredak se čuva samo u ovom pregledaču (localStorage).</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

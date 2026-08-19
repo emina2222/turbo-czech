@@ -266,14 +266,25 @@ p { margin: 0 0 1em; }
 .vocab-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px 14px;
   padding: 12px 4px;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 .vocab-item:last-child { border-bottom: none; }
 .vocab-item .cz { font-weight: 700; font-size: 1.05rem; min-width: 140px; }
 .vocab-item .phon { color: var(--gold); font-size: 0.85rem; font-style: italic; min-width: 130px; }
-.vocab-item .en { color: var(--muted); flex: 1; }
+.vocab-item .en { color: var(--muted); flex: 1; min-width: 140px; }
+
+@media (max-width: 520px) {
+  .vocab-item .cz,
+  .vocab-item .phon { min-width: 0; }
+  .vocab-item .en {
+    min-width: 0;
+    flex-basis: 100%;
+    margin-left: 48px;
+  }
+}
 
 /* ---------------- Flashcards ---------------- */
 
@@ -411,6 +422,45 @@ input[type="text"].blank-input.incorrect { border-color: var(--error); backgroun
 .quiz-result .score { font-size: 2rem; font-weight: 800; }
 .quiz-result.pass { background: var(--success-light); color: var(--success); }
 .quiz-result.fail { background: var(--error-light); color: var(--error); }
+
+/* ---------------- Grammar formula ---------------- */
+
+.formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  background: var(--blue-light);
+  border: 1.5px dashed var(--blue);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  margin: 16px 0;
+  text-align: center;
+}
+.formula-part {
+  display: inline-block;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--blue-dark);
+  box-shadow: var(--shadow-sm);
+}
+.formula-part.aux { border-color: var(--gold); color: #8a6400; background: #fff8e8; }
+.formula-part.stem { border-color: var(--red); color: var(--red); background: var(--red-light); }
+.formula-part.result { border-color: var(--success); color: var(--success); background: var(--success-light); }
+.formula-op { color: var(--muted); font-weight: 800; font-size: 1.3rem; }
+.formula-note {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 2px;
+}
 
 /* ---------------- Callouts ---------------- */
 

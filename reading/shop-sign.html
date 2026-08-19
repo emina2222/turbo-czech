@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natpis u prodavnici — Čitanje — Turbo Czech</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="reading">
+
+<nav class="tc-nav">
+  <div class="tc-nav-inner">
+    <a href="../index.html" class="tc-brand">Turbo <span>Czech</span></a>
+    <div class="tc-nav-links">
+      <a href="../index.html" data-nav="home">Početna</a>
+      <a href="../lessons/lesson-01-greetings.html" data-nav="lessons">Lekcije</a>
+      <a href="../vocabulary/index.html" data-nav="vocabulary">Rečnik</a>
+      <a href="../pronunciation/index.html" data-nav="pronunciation">Izgovor</a>
+      <a href="../grammar/index.html" data-nav="grammar">Gramatika</a>
+      <a href="index.html" data-nav="reading">Čitanje</a>
+    </div>
+    <span class="tc-progress-chip" data-total-lessons="10"></span>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="tc-hero">
+    <div class="eyebrow">Čitanje · Natpis</div>
+    <h1>Natpis u prodavnici</h1>
+    <p class="lead"><a href="index.html">← Nazad na Čitanje</a></p>
+    <p class="lead">Ovo je natpis na vratima male prodavnice u blizini vašeg stana. Pročitajte
+      cenovnik i radno vreme.</p>
+  </div>
+
+  <div class="card">
+    <h2>Cenovnik i radno vreme</h2>
+    <table class="simple-table">
+      <tr><th>Zboží</th><th>Cena</th></tr>
+      <tr><td>Chleba</td><td>35 Kč</td></tr>
+      <tr><td>Mléko</td><td>28 Kč</td></tr>
+      <tr><td>Káva</td><td>89 Kč</td></tr>
+    </table>
+    <p style="margin-top:14px;"><strong>Otevírací doba:</strong> Po–Pá 7:00–19:00, So 8:00–14:00, Ne zavřeno.</p>
+
+    <h3 style="margin-top:20px;">Rečenica sa natpisa</h3>
+    <ul class="vocab-list">
+      <li class="vocab-item"><button class="speak-btn" data-speak="Obchod je otevřený od sedmi do devatenácti hodin, od pondělí do pátku.">🔊</button><span class="cz">Obchod je otevřený od sedmi do devatenácti hodin, od pondělí do pátku.</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="V sobotu je obchod otevřený jen do dvou hodin.">🔊</button><span class="cz">V sobotu je obchod otevřený jen do dvou hodin.</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="V neděli je obchod zavřený.">🔊</button><span class="cz">V neděli je obchod zavřený.</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="ex-label quiz">Provera razumevanja</span>
+    <h2>Odgovorite na pitanja o natpisu</h2>
+    <form class="quiz" data-pass-pct="60" data-result-target=".quiz-result">
+
+      <div class="quiz-question" data-correct="b">
+        <div class="q-text">1. Koliko košta hleb (chleba)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q0" value="a"> 28 Kč</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="b"> 35 Kč</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="c"> 89 Kč</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="c">
+        <div class="q-text">2. Do kog vremena je prodavnica otvorena subotom?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> 19:00</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> 7:00</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> 14:00</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="a">
+        <div class="q-text">3. Da li je prodavnica otvorena nedeljom?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Ne, zatvorena je</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Da, ceo dan</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Da, samo ujutru</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="c">
+        <div class="q-text">4. Koje piće iz cenovnika je najskuplje?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3" value="a"> Mléko</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="b"> Chleba</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="c"> Káva</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Proveri odgovore</button>
+    </form>
+    <div class="quiz-result"></div>
+  </div>
+
+</div>
+
+<div class="tc-footer">Turbo Czech · A1 kurs · Vaš napredak se čuva samo u ovom pregledaču (localStorage).</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

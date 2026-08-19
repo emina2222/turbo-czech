@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natpisi u magacinu — Čitanje — Turbo Czech</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="reading">
+
+<nav class="tc-nav">
+  <div class="tc-nav-inner">
+    <a href="../index.html" class="tc-brand">Turbo <span>Czech</span></a>
+    <div class="tc-nav-links">
+      <a href="../index.html" data-nav="home">Početna</a>
+      <a href="../lessons/lesson-01-greetings.html" data-nav="lessons">Lekcije</a>
+      <a href="../vocabulary/index.html" data-nav="vocabulary">Rečnik</a>
+      <a href="../pronunciation/index.html" data-nav="pronunciation">Izgovor</a>
+      <a href="../grammar/index.html" data-nav="grammar">Gramatika</a>
+      <a href="index.html" data-nav="reading">Čitanje</a>
+    </div>
+    <span class="tc-progress-chip" data-total-lessons="10"></span>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="tc-hero">
+    <div class="eyebrow">Čitanje · Natpisi <span class="warehouse-tag">🏭</span></div>
+    <h1>Natpisi u magacinu</h1>
+    <p class="lead"><a href="index.html">← Nazad na Čitanje</a></p>
+    <p class="lead">Ovo su natpisi i upozorenja koje ćete stalno viđati na zidovima magacina.
+      Naučite ih da prepoznajete brzo, bez razmišljanja.</p>
+  </div>
+
+  <div class="card">
+    <h2>Natpisi</h2>
+    <p style="color:var(--muted); font-size:0.9rem;">Dodirnite zvučnik da čujete svaki natpis.</p>
+    <ul class="vocab-list">
+      <li class="vocab-item"><button class="speak-btn" data-speak="POZOR! Nebezpečí!">🔊</button><span class="cz">POZOR! Nebezpečí!</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Nouzový východ">🔊</button><span class="cz">Nouzový východ</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Vstup pouze s helmou">🔊</button><span class="cz">Vstup pouze s helmou</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Zákaz vstupu">🔊</button><span class="cz">Zákaz vstupu</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Nekuřte zde">🔊</button><span class="cz">Nekuřte zde</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Používejte reflexní vestu">🔊</button><span class="cz">Používejte reflexní vestu</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Rychlost max. 10 km/h">🔊</button><span class="cz">Rychlost max. 10 km/h</span></li>
+      <li class="vocab-item"><button class="speak-btn" data-speak="Skladujte odděleně">🔊</button><span class="cz">Skladujte odděleně</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="ex-label quiz">Provera razumevanja</span>
+    <h2>Šta znače ovi natpisi?</h2>
+    <form class="quiz" data-pass-pct="60" data-result-target=".quiz-result">
+
+      <div class="quiz-question" data-correct="b">
+        <div class="q-text">1. Šta znači "Nouzový východ"?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q0" value="a"> Glavni ulaz</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="b"> Izlaz u slučaju opasnosti</label>
+          <label class="quiz-option"><input type="radio" name="q0" value="c"> Kancelarija</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="c">
+        <div class="q-text">2. Ako vidite "Vstup pouze s helmou", šta morate da nosite?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Rukavice</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Prsluk</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Kacigu</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="a">
+        <div class="q-text">3. Šta znači "Zákaz vstupu"?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Zabranjen ulaz</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Izlaz</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Otvoreno</label>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-correct="b">
+        <div class="q-text">4. Koja je maksimalna brzina prema natpisu "Rychlost max. 10 km/h"?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3" value="a"> 5 km/h</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="b"> 10 km/h</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="c"> 20 km/h</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Proveri odgovore</button>
+    </form>
+    <div class="quiz-result"></div>
+  </div>
+
+</div>
+
+<div class="tc-footer">Turbo Czech · A1 kurs · Vaš napredak se čuva samo u ovom pregledaču (localStorage).</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
