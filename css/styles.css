@@ -260,6 +260,18 @@ p { margin: 0 0 1em; }
 .speak-btn:hover { background: var(--blue); color: #fff; }
 .speak-btn.playing { background: var(--gold); border-color: var(--gold); color: #fff; }
 
+/* ---------------- Story text (flowing paragraphs) ---------------- */
+
+.story-text { font-size: 1.05rem; line-height: 2; }
+.story-text p { margin: 0 0 20px; }
+.story-text p:last-child { margin-bottom: 0; }
+.speak-btn-sm {
+  width: 22px; height: 22px;
+  font-size: 0.65rem;
+  vertical-align: middle;
+  margin: 0 8px 3px 2px;
+}
+
 /* ---------------- Vocab list / table ---------------- */
 
 .vocab-list { list-style: none; padding: 0; margin: 0; }
