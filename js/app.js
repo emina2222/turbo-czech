@@ -22,7 +22,9 @@ const TC = (function () {
   }
 
   function todayStr() {
-    return new Date().toISOString().slice(0, 10);
+    // Local date, not UTC — otherwise a late-evening visit in Czechia counts as the next day.
+    const d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   }
 
   function trackVisit() {
@@ -103,6 +105,7 @@ const TC = (function () {
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
     const czVoice = pickCzechVoice();
+    if (!czVoice) showMissingVoiceNotice();
     if (czVoice) {
       utter.voice = czVoice;
       utter.lang = czVoice.lang;
@@ -119,9 +122,31 @@ const TC = (function () {
     window.speechSynthesis.speak(utter);
   }
 
+  // Without an installed Czech voice the browser reads Czech with a foreign accent — tell the learner once.
+  let voiceNoticeShown = false;
+
+  function showMissingVoiceNotice() {
+    if (voiceNoticeShown) return;
+    voiceNoticeShown = true;
+    const container = document.querySelector(".container");
+    if (!container) return;
+    const note = document.createElement("div");
+    note.className = "callout tip";
+    note.innerHTML =
+      "<h4>🔇 Češki glas nije instaliran</h4>" +
+      "<p>Vaš pregledač nema češki glas, pa izgovor možda neće biti tačan. Dodajte češki jezik " +
+      "(Čeština) u podešavanjima jezika i govora vašeg sistema, ili probajte drugi pregledač " +
+      "(npr. Chrome ili Edge).</p>";
+    container.prepend(note);
+  }
+
   function wireSpeakButtons(root) {
     root = root || document;
     root.querySelectorAll("[data-speak]").forEach((btn) => {
+      // Icon-only buttons: give screen readers something to announce.
+      if (!btn.hasAttribute("aria-label")) {
+        btn.setAttribute("aria-label", "Poslušaj izgovor: " + btn.getAttribute("data-speak"));
+      }
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         speak(btn.getAttribute("data-speak"), { button: btn });
@@ -265,8 +290,12 @@ const TC = (function () {
           total +
           "</div><div>" +
           (pct >= passPct
-            ? "Odlično! Položili ste kviz iz ove lekcije."
-            : "Nije baš tačno — pregledajte lekciju iznad i pokušajte ponovo.") +
+            ? (form.getAttribute("data-lesson-id")
+                ? "Odlično! Položili ste kviz iz ove lekcije."
+                : "Odlično! Dobro ste razumeli tekst.")
+            : (form.getAttribute("data-lesson-id")
+                ? "Nije baš tačno — pregledajte lekciju iznad i pokušajte ponovo."
+                : "Nije baš tačno — pročitajte tekst ponovo i pokušajte još jednom.")) +
           "</div>";
         resultEl.scrollIntoView({ behavior: "smooth", block: "center" });
       }
@@ -291,6 +320,8 @@ const TC = (function () {
 
   document.addEventListener("DOMContentLoaded", () => {
     initNav();
+    // Pages are lang="sr"; mark Czech text so screen readers and hyphenation use Czech rules.
+    document.querySelectorAll(".cz").forEach((el) => el.setAttribute("lang", "cs"));
     wireSpeakButtons();
     wireBlankChecks();
     initFlashcards();

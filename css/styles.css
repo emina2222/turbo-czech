@@ -345,7 +345,7 @@ p { margin: 0 0 1em; }
 .exercise {
   margin: 18px 0;
 }
-.exercise .ex-label {
+.ex-label {
   display: inline-block;
   background: var(--gold);
   color: #fff;
@@ -357,10 +357,10 @@ p { margin: 0 0 1em; }
   border-radius: 999px;
   margin-bottom: 10px;
 }
-.exercise .ex-label.listening { background: var(--blue); }
-.exercise .ex-label.writing { background: var(--red); }
-.exercise .ex-label.blank { background: var(--success); }
-.exercise .ex-label.quiz { background: var(--blue-dark); }
+.ex-label.listening { background: var(--blue); }
+.ex-label.writing { background: var(--red); }
+.ex-label.blank { background: var(--success); }
+.ex-label.quiz { background: var(--blue-dark); }
 
 .fill-blank-row {
   display: flex;
